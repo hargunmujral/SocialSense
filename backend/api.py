@@ -21,10 +21,23 @@ def generateFeedback():
 @app.route('/api/challenge/generateChallenge', methods=['GET', 'POST'])
 def generateChallenge():
     sentiments = [
+        "sadness",
         "happy",
-        "sarcastic",
-        "sad",
-        "angry",
+        "joy",
+        "worry",
+        "anger",
+        "fear",
+        "love",
+        "neutral",
+        "surprise",
+        "happiness",
+        "hate",
+        "fun",
+        "relief",
+        "empty",
+        "enthusiasm",
+        "boredom",
+        "depressed"
     ]
 
     topics = [
