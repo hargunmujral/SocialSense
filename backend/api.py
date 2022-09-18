@@ -22,7 +22,7 @@ def generateFeedback():
 def generateChallenge():
     sentiments = [
         "sadness",
-        "happy",
+        "happiness",
         "joy",
         "worry",
         "anger",
@@ -30,11 +30,9 @@ def generateChallenge():
         "love",
         "neutral",
         "surprise",
-        "happiness",
         "hate",
         "fun",
         "relief",
-        "empty",
         "enthusiasm",
         "boredom",
         "depressed"
@@ -44,7 +42,14 @@ def generateChallenge():
         "pets",
         "food",
         "politics",
-        "friends"
+        "friends",
+        "sports",
+        "work",
+        "holidays",
+        "games",
+        "habits",
+        "hobbies",
+        "dreams"
     ]
 
     sentimentIndex = randint(0, 4)
