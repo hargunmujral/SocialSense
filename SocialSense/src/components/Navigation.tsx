@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
+import WelcomeScreen from '../screens/WelcomeScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,18 +13,36 @@ export default function Navigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen 
+        {/* <Stack.Screen 
           name="Login" 
           component={LoginScreen} 
           options={{headerShown: false}} />
         <Stack.Screen 
           name="Register" 
           component={RegisterScreen} 
-          options={{headerShown: false}} />
+          options={{headerShown: false}} /> */}
         <Stack.Screen 
+          name="Welcome" 
+          component={WelcomeScreen} 
+          options={{
+            headerShown: true,
+            headerTitle: 'SocialSense',
+            headerStyle: {
+              backgroundColor: 'orange',
+            },
+            headerTintColor: 'white',
+            }}/>
+          <Stack.Screen 
           name="Home" 
           component={HomeScreen} 
-          options={{headerShown: false}}/>
+          options={{
+            headerShown: true,
+            headerTitle: 'SocialSense',
+            headerStyle: {
+              backgroundColor: 'orange',
+            },
+            headerTintColor: 'white',
+            }}/>
       </Stack.Navigator>
     </NavigationContainer>
 
