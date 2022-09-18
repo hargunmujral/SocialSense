@@ -1,5 +1,6 @@
 from flask import Flask, request
 from random import randint
+from cohereAPI import generateResponseFeedback
 
 app = Flask(__name__)
 
