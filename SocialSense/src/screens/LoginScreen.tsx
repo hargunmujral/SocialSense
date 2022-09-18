@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { AuthContext } from '../context/AuthContext';
 
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);  
-  
+  const val = useContext(AuthContext);
   return (
     <View style={styles.container}>
       <View> 
+        <Text> {val}</Text>
         <TextInput 
             style={styles.input}
             value={email}
@@ -21,7 +23,9 @@ const LoginScreen = ({navigation}) => {
             onChangeText={text => setPassword(text)}
             secureTextEntry
         />
-        <Button title="Login" />
+        <View style={styles.button}>
+            <Button color='white' title="Login" />
+        </View>
 
         <View style={{flexDirection: 'row', marginTop: 20}}>
             <Text>Don't have an account? </Text>
@@ -53,7 +57,15 @@ const styles = StyleSheet.create({
     },
     link: {
         color: 'blue',
-    }
+    },
+        button: {
+        backgroundColor: 'blue',
+        padding: 10,
+        borderRadius: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 10,
+    },
 });
 
 export default LoginScreen
