@@ -17,7 +17,7 @@ But for those who struggle sensing these social queues, we created an educationa
 * Matthew - Developed response feedback system with Cohere API
 * Brian - Integrated CockroachDB and assisted with response feedback
 
-## Example responses generated from NLP
+## Example feedback generated from NLP
 
 |        Prompts        |User Responses               |Feedback            |
 |----------------|-------------------------------|-----------------------------|
